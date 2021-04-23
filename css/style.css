@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(fonts/OpenSans-Regular.ttf);
+}
+body{
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+.wrapper{
+  width: 1250px;
+  margin: 0 auto;
+}
