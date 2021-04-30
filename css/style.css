@@ -1,19 +1,63 @@
-@font-face {
+/*@font-face {
   font-family: "Open Sans";
-  src: url(fonts/OpenSans-Regular.ttf);
-}
-body{
+  src: url(/fonts/OpenSans-Regular.ttf) format("truetype");
+}*/
+*, *:before, *:after{
   font-family: "Open Sans", Arial, sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
-*, *:before, *:after{
-  box-sizing: border-box;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin: 0px;
-}
+
 .wrapper{
   width: 1250px;
   margin: 0 auto;
+}
+.section-block {
+  height: 100vh;
+  width: 100vw;
+}
+
+.video-fon{
+  position: absolute;
+}
+.video-fon, .video-block{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 20% 50%;
+}
+
+.section-block .header{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+}
+.header__logo{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__menu{
+  width: 60%;
+}
+.header__menu-items{
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20%;
+}
+.header__menu__link{
+  text-decoration: none;
+}
+.header__lang{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

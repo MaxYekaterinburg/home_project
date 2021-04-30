@@ -3,22 +3,41 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <title>Первая страница</title>
+
 </head>
 <body>
 <div class="section-block">
     <div class="video-fon">
-        <video>
-            <source>
+        <video class="video-block" autoplay muted loop poster="image/video-poster.png">
+            <source src="main.mp4" type="video/mp4">
+            <source src="main.webm" type="video/webm">
         </video>
     </div>
-    <header class="header">
-        <div class="header__logo"></div>
-        <nav class="header__menu"></nav>
-        <div class="header__lang"></div>
-    </header>
-    <div class="wrapper">
 
+    <header class="header">
+        <div class="header__logo"><img src="image/logo.png"></div>
+        <nav class="header__menu">
+            <ul class="header__menu-items">
+                <li>
+                    <a href="#" class="header__menu__link">Front-end</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu__link">Back-end</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu__link">Чи</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu__link">Да</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__lang">Русский</div>
+    </header>
+
+    <div class="wrapper">
     </div>
 </div>
 
