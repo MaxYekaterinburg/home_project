@@ -22,6 +22,16 @@
 .video-fon{
   position: absolute;
 }
+/*затемнение видео, для читабельности текста на нём*/
+.video-fon:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.15);
+}
 .video-fon, .video-block{
   height: 100%;
   width: 100%;
@@ -33,7 +43,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  height: 150px;
+  height: 120px;
 }
 .header__logo{
   width: 20%;
@@ -52,12 +62,36 @@
   justify-content: space-around;
   padding: 0 20%;
 }
+.header__menu-items li{
+  display: block;
+}
 .header__menu__link{
+  position: relative;
+  color: #fff;
+  padding: 0 10px 5px;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__menu__link:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  height: 1px;
+  margin: auto;
+  background-color: #fff;
+}
+.header__menu__link:hover:after{
+  transition: all .5s;
+  width: 100%;
 }
 .header__lang{
   width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
