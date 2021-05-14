@@ -2,7 +2,22 @@
   font-family: "Open Sans";
   src: url(/fonts/OpenSans-Regular.ttf) format("truetype");
 }*/
-*, *:before, *:after{
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Font Awesome 5 Free"),
+          /* Если не получилось, загрузит woff2 */
+        url("../webfonts/fa-solid-900.woff2") format("woff2"),
+          /* Если не получилось, загрузит svg */
+        url("../webfonts/fa-solid-900.svg") format("svg"),
+          /* Если не получилось, загрузит svg */
+        url("../webfonts/fa-solid-900.eot") format("eot"),
+          /* Если браузер не поддерживает woff2, загрузит woff */
+        url("../webfonts/fa-solid-900.woff") format("woff");
+}
+
+*{
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 18px;
   box-sizing: border-box;
@@ -16,7 +31,12 @@
 }
 .section-block {
   height: 100vh;
-  width: 100vw;
+  overflow: hidden;
+}
+.section-block__column{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .video-fon{
@@ -93,5 +113,61 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.header__lang__text{
   color: #fff;
+}
+.header__lang__angle-down{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  top: 0px;
+  transition: top .3s;
+}
+.header__lang-menu{
+  cursor: pointer;
+}
+.header__lang-menu:hover .header__lang__angle-down{
+  top: 7px;
+}
+.section-block .wrapper {
+  display: flex;
+}
+header + .wrapper{
+  position: relative;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 120px;
+  margin: auto;
+}
+.section-block .wrapper{
+
+}
+.section-block .title-videofon{
+  color: #fff;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.section-block .section-block_bottom{
+  position: relative;
+  height: 60px;
+  padding: 0 0 30px 10%;
+}
+.section-block_bottom-text{
+  color: #fff;
+}
+
+/*Второй блок*/
+.section-block__row{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.section-block__first-sliders{
+  width: 70%;
+}
+.section-block__second-sliders{
+  width: 30%;
 }
