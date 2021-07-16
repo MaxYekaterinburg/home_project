@@ -161,13 +161,54 @@ header + .wrapper{
 
 /*Второй блок*/
 .section-block__row{
-  display: flex;
-  flex-direction: row;
   height: 100%;
 }
 .section-block__first-sliders{
-  width: 70%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
 }
 .section-block__second-sliders{
-  width: 30%;
+  width: 35%;
+  height: 100%;
+}
+.section-block__second-sliders svg{
+  width: 100%;
+}
+/*двойной слайдер*/
+.section-block__second-sliders__slide-1,
+.section-block__second-sliders__slide-2,
+.section-block__second-sliders__slide-3,
+.section-block__second-sliders__slide-4,
+.section-block__second-sliders__slide-5{
+  height: 20%;
+  display: flex;
+}
+.section-block__second-sliders__slide-1 img,
+.section-block__second-sliders__slide-2 img,
+.section-block__second-sliders__slide-3 img,
+.section-block__second-sliders__slide-4 img,
+.section-block__second-sliders__slide-5 img{
+  width: 100%;
+  object-fit: cover;
+}
+.section-block__second-sliders__slide-1 img {
+  object-position: 40% 80%;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 9% 100%);
+}
+.section-block__second-sliders__slide-2 img {
+  object-position: 0 30%;
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 3% 100%);
+}
+.section-block__second-sliders__slide-3 img {
+  object-position: 0 80%;
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%, 0 50%);
+}
+.section-block__second-sliders__slide-4 img {
+  object-position: 0 45%;
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 9% 100%);
+}
+.section-block__second-sliders__slide-5 img {
+  object-position: 0 100%;
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 15% 100%);
 }
